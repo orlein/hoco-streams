@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Home, Users, Play, User } from "lucide-react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Home, Users, Play, User } from 'lucide-react';
 
 const navItems = [
-  { icon: Home, label: "Lobby", href: "/" },
-  { icon: Users, label: "Rooms", href: "/rooms" },
-  { icon: Play, label: "Play", href: "/play" },
-  { icon: User, label: "Profile", href: "/profile" },
+  { icon: Home, label: 'Lobby', href: '/' },
+  { icon: Users, label: 'Rooms', href: '/rooms' },
+  { icon: Play, label: 'Play', href: '/play' },
+  { icon: User, label: 'Profile', href: '/profile' },
 ];
 
 export default function BottomNavigation() {
@@ -22,7 +22,7 @@ export default function BottomNavigation() {
             <Link
               href={item.href}
               className={`flex flex-col items-center p-2 ${
-                pathname === item.href ? "text-yellow-300" : "text-indigo-100"
+                pathname === item.href ? 'text-yellow-300' : 'text-indigo-100'
               }`}
             >
               <item.icon className="w-6 h-6" />

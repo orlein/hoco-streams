@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import React from "react";
-import "./globals.css";
-import { Providers } from "./providers";
-import BottomNavigation from "@/components/bottom-navigation";
+import type { Metadata } from 'next';
+import React from 'react';
+import './globals.css';
+import { Providers } from './providers';
+import BottomNavigation from '@/components/bottom-navigation';
 
 export const metadata: Metadata = {
-  title: "Streams!",
+  title: 'Streams!',
 };
 
 export default async function RootLayout({

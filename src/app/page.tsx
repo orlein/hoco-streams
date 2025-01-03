@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default async function MainPage() {
   return (
@@ -19,7 +19,7 @@ export default async function MainPage() {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            {["Waterfall", "Ocean Currents", "River Rapids"].map((room) => (
+            {['Waterfall', 'Ocean Currents', 'River Rapids'].map((room) => (
               <li key={room} className="bg-white p-2 rounded shadow">
                 <span className="font-medium">{room}</span>
                 <span className="float-right text-sm text-gray-500">

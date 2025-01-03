@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 export default function Play() {
   return (
@@ -21,7 +21,7 @@ export default function Play() {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            {["Alice", "Bob", "Charlie", "You"].map((player) => (
+            {['Alice', 'Bob', 'Charlie', 'You'].map((player) => (
               <li key={player} className="bg-white p-2 rounded shadow">
                 {player}
               </li>

@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { createClient } from '@/utils/supabase/server';
+import { redirect } from 'next/navigation';
 
 export default async function RoomsPage() {
   const supabase = await createClient();
@@ -9,18 +9,18 @@ export default async function RoomsPage() {
   const { data, error } = await supabase.auth.getUser();
 
   if (!data.user) {
-    redirect("/login");
+    redirect('/login');
   }
 
   if (error) {
-    redirect("/error");
+    redirect('/error');
   }
 
   const rooms = [
-    { name: "Waterfall", players: 3, maxPlayers: 8 },
-    { name: "Ocean Currents", players: 5, maxPlayers: 10 },
-    { name: "River Rapids", players: 2, maxPlayers: 6 },
-    { name: "Gentle Stream", players: 4, maxPlayers: 8 },
+    { name: 'Waterfall', players: 3, maxPlayers: 8 },
+    { name: 'Ocean Currents', players: 5, maxPlayers: 10 },
+    { name: 'River Rapids', players: 2, maxPlayers: 6 },
+    { name: 'Gentle Stream', players: 4, maxPlayers: 8 },
   ];
 
   return (

@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "next-themes";
-import React from "react";
-import { PropsWithChildren } from "react";
-import { Provider } from "react-redux";
-import { AppStore, makeStore } from "./lib/store";
-import { SupabaseContext } from "./lib/use-supabase";
-import { createClient, SupabaseBrowserClient } from "@/utils/supabase/client";
+import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from 'next-themes';
+import React from 'react';
+import { PropsWithChildren } from 'react';
+import { Provider } from 'react-redux';
+import { AppStore, makeStore } from './lib/store';
+import { SupabaseContext } from './lib/use-supabase';
+import { createClient, SupabaseBrowserClient } from '@/utils/supabase/client';
 
 export function Providers({ children }: PropsWithChildren) {
   const storeRef = React.useRef<AppStore | null>(null);
