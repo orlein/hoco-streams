@@ -13,6 +13,18 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { login } from "./login-action";
+import React from "react";
+import { useFormStatus } from "react-dom";
+
+function SubmitButton() {
+  const status = useFormStatus();
+
+  return (
+    <Button type="submit" className="w-full" disabled={status.pending}>
+      Login
+    </Button>
+  );
+}
 
 export function LoginForm({
   className,
@@ -52,9 +64,7 @@ export function LoginForm({
                 </div>
                 <Input id="password" name="password" type="password" required />
               </div>
-              <Button type="submit" className="w-full">
-                Login
-              </Button>
+              <SubmitButton />
               {/* <Button variant="outline" className="w-full">
                 Login with Google
               </Button> */}

@@ -16,12 +16,20 @@ import React from "react";
 import { useFormStatus } from "react-dom";
 import { signup } from "./signup-action";
 
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" className="w-full" disabled={pending}>
+      Sign Up
+    </Button>
+  );
+}
+
 export function SignupForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
-  const { pending } = useFormStatus();
-
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -65,9 +73,7 @@ export function SignupForm({
                   required
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={pending}>
-                Sign Up
-              </Button>
+              <SubmitButton />
             </div>
             <div className="mt-4 text-center text-sm">
               Already have an account?{" "}
